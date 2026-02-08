@@ -16,7 +16,7 @@ export default function Header({ universityName, universityLogo }: HeaderProps) 
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14 sm:h-16">
           {/* University Logo */}
-          <a href="/" className="flex items-center shrink-0 max-w-[55%] sm:max-w-none">
+          <div className="flex items-center shrink-0 max-w-[55%] sm:max-w-none">
             {universityLogo ? (
               <Image
                 src={universityLogo}
@@ -31,7 +31,7 @@ export default function Header({ universityName, universityLogo }: HeaderProps) 
                 pgdegrees<span className="text-[var(--theme-primary,#f97316)]">.online</span>
               </span>
             )}
-          </a>
+          </div>
 
           {/* CTA Button */}
           <button

@@ -1,6 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import { CheckCircle } from "lucide-react";
+import { getAccreditationLogo } from "@/lib/accreditation";
 import type { Approval, UniversityTheme } from "@/lib/types";
 
 interface AccreditationCarouselProps {
@@ -22,29 +24,40 @@ export default function AccreditationCarousel({ approvals, theme }: Accreditatio
         </div>
         <div className="overflow-x-auto pb-4 -mx-4 px-4 sm:mx-0 sm:px-0">
           <div className="flex gap-4 sm:gap-6 min-w-max sm:min-w-0 sm:flex-wrap sm:justify-center">
-            {approvals.map((approval) => (
-              <div
-                key={approval.shortName}
-                className="flex-shrink-0 w-full sm:w-auto sm:min-w-[200px] sm:max-w-[260px] p-5 rounded-2xl border border-slate-100 hover:shadow-lg transition-all duration-300"
-              >
-                <div className="flex items-start gap-3">
-                  <div
-                    className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0"
-                    style={{ backgroundColor: theme.primaryLight, color: theme.primary }}
-                  >
-                    <CheckCircle className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-slate-800 text-sm sm:text-base">
-                      {approval.shortName}
-                    </h3>
-                    <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">
-                      {approval.description}
-                    </p>
-                  </div>
+            {approvals.map((approval) => {
+              const logoPath = getAccreditationLogo(approval.shortName);
+              return (
+                <div
+                  key={approval.shortName}
+                  className="flex-shrink-0 w-[140px] sm:w-[160px] p-5 rounded-2xl border border-slate-100 hover:shadow-lg hover:border-slate-200 transition-all duration-300 flex flex-col items-center text-center"
+                >
+                  {logoPath ? (
+                    <div className="relative w-16 h-16 sm:w-20 sm:h-20 mb-3 shrink-0">
+                      <Image
+                        src={logoPath}
+                        alt={approval.shortName}
+                        fill
+                        className="object-contain"
+                        sizes="80px"
+                      />
+                    </div>
+                  ) : (
+                    <div
+                      className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl flex items-center justify-center mb-3 shrink-0"
+                      style={{ backgroundColor: theme.primaryLight, color: theme.primary }}
+                    >
+                      <CheckCircle className="w-8 h-8 sm:w-10 sm:h-10" />
+                    </div>
+                  )}
+                  <h3 className="font-bold text-slate-800 text-sm sm:text-base">
+                    {approval.shortName}
+                  </h3>
+                  <p className="text-xs text-slate-600 mt-1 leading-relaxed">
+                    {approval.description}
+                  </p>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>

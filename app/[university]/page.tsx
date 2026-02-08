@@ -76,6 +76,8 @@ export default function UniversityPage({
         <TrustStrip approvals={university.approvals} theme={t} />
         <StatsStrip highlights={university.highlights} theme={t} />
 
+        <TabbedDetails university={university} />
+
         <FeaturesSection features={university.features} theme={t} />
         <AccreditationCarousel approvals={university.approvals} theme={t} />
         <ProgramHighlights highlights={university.programHighlights} theme={t} />
@@ -107,7 +109,6 @@ export default function UniversityPage({
           theme={t}
         />
         <TestimonialsSection testimonials={university.testimonials} theme={t} />
-        <TabbedDetails university={university} />
       </main>
 
       <Footer />
