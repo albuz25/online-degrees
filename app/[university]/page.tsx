@@ -9,6 +9,12 @@ import Header from "@/components/Header";
 import HeroWithForm from "@/components/HeroWithForm";
 import TrustStrip from "@/components/TrustStrip";
 import StatsStrip from "@/components/StatsStrip";
+import FeaturesSection from "@/components/FeaturesSection";
+import AccreditationCarousel from "@/components/AccreditationCarousel";
+import ProgramHighlights from "@/components/ProgramHighlights";
+import CourseCards from "@/components/CourseCards";
+import WhyChoose from "@/components/WhyChoose";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import TabbedDetails from "@/components/TabbedDetails";
 import StickyMobileCTA from "@/components/StickyMobileCTA";
 import LeadFormModal from "@/components/LeadFormModal";
@@ -70,6 +76,11 @@ export default function UniversityPage({
         <TrustStrip approvals={university.approvals} theme={t} />
         <StatsStrip highlights={university.highlights} theme={t} />
 
+        <FeaturesSection features={university.features} theme={t} />
+        <AccreditationCarousel approvals={university.approvals} theme={t} />
+        <ProgramHighlights highlights={university.programHighlights} theme={t} />
+        <CourseCards programs={university.programs} theme={t} />
+
         {/* CTA Banner */}
         <section
           className="py-8 sm:py-10 md:py-14"
@@ -90,6 +101,12 @@ export default function UniversityPage({
           </div>
         </section>
 
+        <WhyChoose
+          shortName={university.shortName}
+          items={university.whyChoose}
+          theme={t}
+        />
+        <TestimonialsSection testimonials={university.testimonials} theme={t} />
         <TabbedDetails university={university} />
       </main>
 

@@ -1,4 +1,30 @@
-import { University, UniversityTheme } from "@/lib/types";
+import { University, UniversityTheme, FeatureItem, ProgramHighlight, WhyChooseItem } from "@/lib/types";
+
+// ── Shared Content (Reference-style sections) ─────────────────────────
+const sharedFeatures: FeatureItem[] = [
+  { icon: "laptop", title: "100% Online Learning", description: "Study from anywhere, anytime at your own pace" },
+  { icon: "headphones", title: "24x7 Student Support", description: "Get help whenever you need it" },
+  { icon: "award", title: "UGC Approved", description: "Globally recognized degrees" },
+  { icon: "briefcase", title: "Job Assistance", description: "Career support and placement" },
+];
+
+const sharedProgramHighlights: ProgramHighlight[] = [
+  { title: "Emerging Specializations", description: "New-age specializations shaping tomorrow's business landscape" },
+  { title: "Robust Learning Model", description: "550+ hours of video lectures to maximize your learning" },
+  { title: "Personalized Learning", description: "Choice-based credit system for a tailored learning path" },
+  { title: "Real World Projects", description: "Case studies and projects to succeed in your domain" },
+];
+
+const sharedWhyChoose: WhyChooseItem[] = [
+  { title: "Globally Recognized Degree", description: "UGC-entitled degrees recognized for higher studies and global career mobility" },
+  { title: "Industry-Relevant Curriculum", description: "Courseware designed with industry experts for real-world applicability" },
+  { title: "Placement Assistance", description: "Dedicated career services team and placement drives with top companies" },
+  { title: "Easy Financing Options", description: "EMI options, scholarships, and flexible payment plans available" },
+  { title: "Flexible Schedule", description: "Learn at your own pace while balancing work and personal commitments" },
+  { title: "Experienced Faculty", description: "Learn from faculty and mentors with real-world industry insights" },
+  { title: "Alumni Network", description: "Access a large alumni network for career guidance and networking" },
+  { title: "Live & Recorded Sessions", description: "Attend live lectures or watch recordings at your convenience" },
+];
 
 // ── Brand Theme Presets ──────────────────────────────────────────────
 const themes: Record<string, UniversityTheme> = {
@@ -389,6 +415,9 @@ export const universities: University[] = [
         ],
       },
     ],
+    features: sharedFeatures,
+    programHighlights: sharedProgramHighlights,
+    whyChoose: sharedWhyChoose,
     brochureLink: "#",
     whatsappNumber: "919999999999",
     phoneNumber: "+91-9999999999",
@@ -625,6 +654,9 @@ export const universities: University[] = [
         ],
       },
     ],
+    features: sharedFeatures,
+    programHighlights: sharedProgramHighlights,
+    whyChoose: sharedWhyChoose,
     brochureLink: "#",
     whatsappNumber: "919999999999",
     phoneNumber: "+91-9999999999",
@@ -664,6 +696,9 @@ export const universities: University[] = [
     testimonials: [],
     faqs: [],
     syllabus: [],
+    features: sharedFeatures,
+    programHighlights: sharedProgramHighlights,
+    whyChoose: sharedWhyChoose,
     brochureLink: "#",
     whatsappNumber: "919999999999",
     phoneNumber: "+91-9999999999",
@@ -700,6 +735,9 @@ export const universities: University[] = [
     testimonials: [],
     faqs: [],
     syllabus: [],
+    features: sharedFeatures,
+    programHighlights: sharedProgramHighlights,
+    whyChoose: sharedWhyChoose,
     brochureLink: "#",
     whatsappNumber: "919999999999",
     phoneNumber: "+91-9999999999",
@@ -735,6 +773,9 @@ export const universities: University[] = [
     testimonials: [],
     faqs: [],
     syllabus: [],
+    features: sharedFeatures,
+    programHighlights: sharedProgramHighlights,
+    whyChoose: sharedWhyChoose,
     brochureLink: "#",
     whatsappNumber: "919999999999",
     phoneNumber: "+91-9999999999",
@@ -770,6 +811,9 @@ export const universities: University[] = [
     testimonials: [],
     faqs: [],
     syllabus: [],
+    features: sharedFeatures,
+    programHighlights: sharedProgramHighlights,
+    whyChoose: sharedWhyChoose,
     brochureLink: "#",
     whatsappNumber: "919999999999",
     phoneNumber: "+91-9999999999",
@@ -805,6 +849,9 @@ export const universities: University[] = [
     testimonials: [],
     faqs: [],
     syllabus: [],
+    features: sharedFeatures,
+    programHighlights: sharedProgramHighlights,
+    whyChoose: sharedWhyChoose,
     brochureLink: "#",
     whatsappNumber: "919999999999",
     phoneNumber: "+91-9999999999",
@@ -841,6 +888,9 @@ export const universities: University[] = [
     testimonials: [],
     faqs: [],
     syllabus: [],
+    features: sharedFeatures,
+    programHighlights: sharedProgramHighlights,
+    whyChoose: sharedWhyChoose,
     brochureLink: "#",
     whatsappNumber: "919999999999",
     phoneNumber: "+91-9999999999",
@@ -876,6 +926,9 @@ export const universities: University[] = [
     testimonials: [],
     faqs: [],
     syllabus: [],
+    features: sharedFeatures,
+    programHighlights: sharedProgramHighlights,
+    whyChoose: sharedWhyChoose,
     brochureLink: "#",
     whatsappNumber: "919999999999",
     phoneNumber: "+91-9999999999",
@@ -911,6 +964,9 @@ export const universities: University[] = [
     testimonials: [],
     faqs: [],
     syllabus: [],
+    features: sharedFeatures,
+    programHighlights: sharedProgramHighlights,
+    whyChoose: sharedWhyChoose,
     brochureLink: "#",
     whatsappNumber: "919999999999",
     phoneNumber: "+91-9999999999",

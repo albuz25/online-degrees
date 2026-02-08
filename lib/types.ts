@@ -42,6 +42,22 @@ export interface SyllabusItem {
   subjects: string[];
 }
 
+export interface FeatureItem {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+export interface ProgramHighlight {
+  title: string;
+  description: string;
+}
+
+export interface WhyChooseItem {
+  title: string;
+  description: string;
+}
+
 export interface UniversityTheme {
   /** Main brand color hex (e.g. "#1A325D") */
   primary: string;
@@ -90,6 +106,9 @@ export interface University {
   testimonials: Testimonial[];
   faqs: FAQ[];
   syllabus: SyllabusItem[];
+  features?: FeatureItem[];
+  programHighlights?: ProgramHighlight[];
+  whyChoose?: WhyChooseItem[];
   brochureLink: string;
   whatsappNumber: string;
   phoneNumber: string;
