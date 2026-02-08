@@ -3,6 +3,7 @@
 import { useState, FormEvent, useEffect } from "react";
 import { Loader2, ShieldCheck } from "lucide-react";
 import { INDIAN_STATES, type Program, type LeadFormData, type UniversityTheme } from "@/lib/types";
+import { trackLead } from "@/components/MetaPixel";
 
 interface LeadFormProps {
   programs: Program[];
@@ -97,6 +98,7 @@ export default function LeadForm({
         const data = await res.json().catch(() => ({}));
         throw new Error(data.error || "Failed to submit");
       }
+      trackLead();
       setIsSubmitted(true);
     } catch (err) {
       alert(err instanceof Error ? err.message : "Something went wrong. Please try again.");
